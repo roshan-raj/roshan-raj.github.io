@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "title": "Alumni Connect",
+            "description": "A comprehensive web application enabling seamless communication between current students and alumni. Built with modern web technologies to foster university community connections.",
+            "technologies": ["TypeScript", "MEAN Stack", "MongoDB", "Angular"],
+            "githubUrl": "https://github.com/roshan-raj/Alumni-Connect"
+        },
+        {
+            "title": "Blockchain Visualization",
+            "description": "Computer Graphics project demonstrating the working of blockchain technology with visual proof-of-work implementation. Educational tool for understanding blockchain concepts.",
+            "technologies": ["C++", "Computer Graphics", "Blockchain"],
+            "githubUrl": "https://github.com/roshan-raj/Computer-Graphic-Project-on-working-of-Blockchain"
+        },
+        {
+            "title": "Shop Management System",
+            "description": "E-commerce platform where shopkeepers can list products and customers can purchase with home delivery or in-store pickup options. Complete retail solution.",
+            "technologies": ["Full Stack", "E-commerce", "Database"],
+            "githubUrl": "https://github.com/roshan-raj/Shop-Management-System"
+        },
+        {
+            "title": "Weather Application",
+            "description": "Real-time weather application using OpenWeatherMap API. Displays temperature, country information, and location details with a clean, intuitive interface.",
+            "technologies": ["JavaScript", "API Integration", "OpenWeatherMap"],
+            "githubUrl": "https://github.com/roshan-raj"
+        },
+        {
+            "title": "Car Rental Management",
+            "description": "Online car rental management system with comprehensive booking, inventory management, and customer tracking features. Built for efficiency and scalability.",
+            "technologies": ["PHP", "MySQL", "Web Application"],
+            "githubUrl": "https://github.com/roshan-raj"
+        },
+        {
+            "title": "NodeJS Blockchain",
+            "description": "Simple yet comprehensive implementation showcasing blockchain creation and proof-of-work algorithm. Perfect for understanding blockchain fundamentals.",
+            "technologies": ["JavaScript", "Node.js", "Blockchain"],
+            "githubUrl": "https://github.com/roshan-raj/NodeJS-BlockChain"
+        }
+    ]
+}

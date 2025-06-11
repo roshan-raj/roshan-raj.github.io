@@ -877,3 +877,18 @@ footer::before {
         transform: rotate(360deg);
     }
 }
+
+/* Project Grid Error State */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    color: var(--text);
+}
+
+.error-message p {
+    margin: 0;
+    font-size: 1.1rem;
+}
