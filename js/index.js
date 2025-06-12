@@ -269,7 +269,7 @@ function loadProjects() {
 
 // Initialize projects when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    loadProjects();
+    // loadProjects();
 
     // Retry loading if initial load fails
     window.addEventListener('online', () => {

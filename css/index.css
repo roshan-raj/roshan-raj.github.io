@@ -675,7 +675,7 @@ nav.scrolled {
 /* Contact Section */
 .contact {
     padding: 5rem 2rem;
-    background: var(--bg-secondary);
+    background: var(--bg);
     min-height: 50vh;
 }
 
