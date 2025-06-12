@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roshan Raj</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- Loader -->
     <div class="loader" id="loader">
@@ -25,7 +27,8 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#blogs">Writings</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -42,12 +45,14 @@
                 <a href="#projects" class="btn btn-primary">
                     <span>View My Work</span>
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
                 <a href="https://github.com/roshan-raj" target="_blank" class="btn btn-secondary">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                     <span>GitHub</span>
                 </a>
@@ -61,9 +66,13 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I’m a backend developer passionate about designing systems that scale—cleanly, reliably, and purposefully. I work extensively with TypeScript, SST, AWS (serverless), and Neo4j to build modern, event-driven architectures that are resilient and responsive.</p>
-                    <p>Much of my current focus is on implementing pub/sub models to support loosely coupled, scalable systems that enable teams to move faster with confidence. I collaborate closely with Product Owners to ensure every technical decision is rooted in user impact and business value.
-</p>
+                    <p>I’m a backend developer passionate about designing systems that scale—cleanly, reliably, and
+                        purposefully. I work extensively with TypeScript, SST, AWS (serverless), and Neo4j to build
+                        modern, event-driven architectures that are resilient and responsive.</p>
+                    <p>Much of my current focus is on implementing pub/sub models to support loosely coupled, scalable
+                        systems that enable teams to move faster with confidence. I collaborate closely with Product
+                        Owners to ensure every technical decision is rooted in user impact and business value.
+                    </p>
                     <div class="skills">
                         <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">TypeScript</span>
@@ -76,11 +85,13 @@
                 </div>
                 <div class="about-image">
                     <svg width="400" height="400" viewBox="0 0 400 400" fill="none">
-                        <circle cx="200" cy="200" r="180" fill="url(#gradient1)" opacity="0.1"/>
-                        <circle cx="200" cy="200" r="150" fill="url(#gradient1)" opacity="0.1"/>
-                        <circle cx="200" cy="200" r="120" fill="url(#gradient1)" opacity="0.1"/>
-                        <path d="M200 100 L250 150 L250 250 L200 300 L150 250 L150 150 Z" fill="url(#gradient2)" opacity="0.8"/>
-                        <text x="200" y="210" text-anchor="middle" fill="white" font-size="48" font-weight="bold">RR</text>
+                        <circle cx="200" cy="200" r="180" fill="url(#gradient1)" opacity="0.1" />
+                        <circle cx="200" cy="200" r="150" fill="url(#gradient1)" opacity="0.1" />
+                        <circle cx="200" cy="200" r="120" fill="url(#gradient1)" opacity="0.1" />
+                        <path d="M200 100 L250 150 L250 250 L200 300 L150 250 L150 150 Z" fill="url(#gradient2)"
+                            opacity="0.8" />
+                        <text x="200" y="210" text-anchor="middle" fill="white" font-size="48"
+                            font-weight="bold">RR</text>
                         <defs>
                             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
@@ -97,10 +108,247 @@
         </div>
     </section>
 
+    <!-- Skills & Experience Section -->
+    <section class="skills-experience fade-in" id="experience">
+        <div class="container">
+            <h2 class="section-title">Skills & Experience</h2>
+
+            <!-- Professional Experience -->
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Technical Engineer</h3>
+                        <h4 class="timeline-company">KOCH Industries</h4>
+                        <p class="timeline-period">2023 - Present</p>
+                        <p class="timeline-description">Building scalable backend systems with focus on event-driven
+                            architectures. Working with TypeScript, AWS serverless technologies, and implementing
+                            pub/sub models for distributed systems. Collaborating with product teams to deliver
+                            user-centric technical solutions.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Engineer</h3>
+                        <h4 class="timeline-company">Torry Harris Integration Solutions</h4>
+                        <p class="timeline-period">2019 - 2023</p>
+                        <p class="timeline-description">Led full-cycle backend development at Torry Harris, building
+                            production-ready REST APIs and serverless solutions across the AWS ecosystem (Lambda,
+                            CloudWatch, SNS, SQS, S3, CloudFront), while gathering requirements and proposing system
+                            improvements that enhanced application performance and scalability</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills Grid -->
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C#</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Cloud & Infrastructure</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Amazon Web Services</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Serverless</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SST Framework</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Databases & Data</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Neo4j</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend & Integration</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">API Integration</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Emerging Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Blockchain</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Computer Graphics</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="blogs fade-in" id="blogs">
+        <div class="container">
+            <h2 class="section-title">Writings & Insights</h2>
+            <div class="blogs-content">
+                <div class="blog-intro">
+                    <p>I share my thoughts on software development, system architecture, and emerging technologies
+                        through technical writing. My articles focus on practical insights from building scalable
+                        systems and exploring the intersection of code, cloud, and innovation.</p>
+                </div>
+
+                <div class="blog-platform">
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <div class="platform-icon">
+                                <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M7.826 10.083a.784.784 0 0 0-.468-.175h-.701v4.198h.701a.786.786 0 0 0 .468-.175c.155-.117.233-.292.233-.525v-2.798c.001-.233-.078-.408-.233-.525zM19.236 3H4.764C3.791 3 3.002 3.787 3.002 4.76v14.48c0 .973.789 1.76 1.762 1.76h14.472c.973 0 1.762-.787 1.762-1.76V4.76C21 3.787 20.209 3 19.236 3zM9.195 13.414c0 .755-.466 1.901-1.942 1.901H5.687V8.685h1.566c1.476 0 1.942 1.146 1.942 1.901v2.828zm5.753 1.901h-1.545V11.71H11.1v3.605H9.556V8.685h4.392v3.933zm2.465-3.933v.608h-1.154v3.325h-1.544V11.99h-1.154v-.608h3.852z" />
+                                </svg>
+                            </div>
+                            <div class="platform-info">
+                                <h3>DEV Community</h3>
+                                <p>Technical articles and community insights</p>
+                            </div>
+                        </div>
+                        <div class="platform-stats">
+                            <div class="stat">
+                                <span class="stat-label">Member Since</span>
+                                <span class="stat-value">2019</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Achievements</span>
+                                <span class="stat-value">5+ Year Club</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Hackathons</span>
+                                <span class="stat-value">Hacktoberfest 2021</span>
+                            </div>
+                        </div>
+                        <div class="platform-actions">
+                            <a href="https://dev.to/roshanraj" target="_blank" class="platform-link">
+                                <span>Read Articles</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-topics">
+                    <h3>Topics I Write About</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">System Architecture</span>
+                        <span class="topic-tag">Event-Driven Design</span>
+                        <span class="topic-tag">Serverless Computing</span>
+                        <span class="topic-tag">JavaScript/TypeScript</span>
+                        <span class="topic-tag">AWS & Cloud</span>
+                        <span class="topic-tag">Backend Development</span>
+                        <span class="topic-tag">API Design</span>
+                        <span class="topic-tag">Blockchain Technology</span>
+                        <span class="topic-tag">Developer Experience</span>
+                        <span class="topic-tag">Open Source</span>
+                    </div>
+                </div>
+
+                <div class="writing-philosophy">
+                    <blockquote>
+                        "I believe in sharing knowledge that bridges the gap between theoretical concepts and practical
+                        implementation. Every article I write aims to help developers build better, more scalable
+                        systems while understanding the 'why' behind the 'how'."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Projects Section -->
     <section class="projects fade-in" id="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>            
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid" id="projectsGrid">
                 <!-- Projects will be loaded dynamically -->
             </div>
@@ -112,29 +360,35 @@
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
             <div class="contact-content">
-                <p class="contact-text">I'm always excited to collaborate on interesting projects or discuss new opportunities. Feel free to reach out!</p>
+                <p class="contact-text">I'm always excited to collaborate on interesting projects.
+                    Feel free to reach out!</p>
                 <div class="contact-links">
                     <a href="https://github.com/roshan-raj" target="_blank" class="contact-link">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                         GitHub
                     </a>
                     <a href="https://www.linkedin.com/in/roshan139154/" target="_blank" class="contact-link">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                         LinkedIn
                     </a>
                     <a href="https://stackoverflow.com/users/8496328/roshan-raj" target="_blank" class="contact-link">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M15 21h3v-3.6c0-3.464-1.472-5.4-4.5-5.4-1.527 0-2.717.669-3 1.5V12h-3v9h3v-5.1c0-1.323.977-2.4 2.25-2.4s1.75 1.077 1.75 2.4V21zM18 8.4V6.057c0-.345.035-.69.065-1.036L16.77 3.307c-.215-.43-.655-.699-1.14-.699-.205 0-.41.05-.595.145l-8.97 4.485c-.645.325-.875 1.12-.55 1.765.12.24.315.44.555.555l1.485.745c.345-.69.86-1.28 1.5-1.71l-1.26-.63 8.97-4.485 2.235 4.47V8.4zM19.5 2.853L21.27.538c.195-.195.195-.512 0-.707-.098-.098-.226-.147-.354-.147H14.25c-.277 0-.5.224-.5.5s.223.5.5.5h5.396l-1.77 1.77c-.195.195-.195.512 0 .707.195.195.512.195.707 0l.917-.908z"/>
+                            <path
+                                d="M15 21h3v-3.6c0-3.464-1.472-5.4-4.5-5.4-1.527 0-2.717.669-3 1.5V12h-3v9h3v-5.1c0-1.323.977-2.4 2.25-2.4s1.75 1.077 1.75 2.4V21zM18 8.4V6.057c0-.345.035-.69.065-1.036L16.77 3.307c-.215-.43-.655-.699-1.14-.699-.205 0-.41.05-.595.145l-8.97 4.485c-.645.325-.875 1.12-.55 1.765.12.24.315.44.555.555l1.485.745c.345-.69.86-1.28 1.5-1.71l-1.26-.63 8.97-4.485 2.235 4.47V8.4zM19.5 2.853L21.27.538c.195-.195.195-.512 0-.707-.098-.098-.226-.147-.354-.147H14.25c-.277 0-.5.224-.5.5s.223.5.5.5h5.396l-1.77 1.77c-.195.195-.195.512 0 .707.195.195.512.195.707 0l.917-.908z" />
                         </svg>
                         Stack Overflow
                     </a>
                     <a href="mailto:raj_roshan@outlook.com" class="contact-link">
                         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
                         </svg>
                         Email
                     </a>
@@ -149,4 +403,5 @@
     </footer>
     <script src="js/index.js"></script>
 </body>
+
 </html>
