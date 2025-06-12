@@ -284,12 +284,12 @@ const themeToggle = document.getElementById('theme-toggle');
 const sunIcon = themeToggle.querySelector('.sun-icon');
 const moonIcon = themeToggle.querySelector('.moon-icon');
 
-// Check for saved theme preference, otherwise use system preference
+// Check for saved theme preference, otherwise use dark theme as default
 const getThemePreference = () => {
     if (localStorage.getItem('theme')) {
         return localStorage.getItem('theme');
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'dark'; // Default to dark theme
 };
 
 // Set theme on load
@@ -317,11 +317,10 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Watch for system theme changes
+// Watch for system theme changes, but only apply if no user preference is set
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        updateThemeIcon(newTheme);
+        document.documentElement.setAttribute('data-theme', 'dark'); // Keep dark theme as default
+        updateThemeIcon('dark');
     }
 });
