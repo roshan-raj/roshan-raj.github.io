@@ -17,11 +17,22 @@
         document.querySelectorAll('meta[name="theme-color"]').forEach((m) => m.setAttribute('content', bg));
     };
 
-    themeToggle.addEventListener('click', () => {
-        const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const applyTheme = (next) => {
         root.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (e) { /* storage unavailable */ }
         syncThemeColor();
+    };
+
+    // Ease the light <-> dark change with a cross-fade instead of an abrupt brightness jump
+    themeToggle.addEventListener('click', () => {
+        const next = currentTheme() === 'dark' ? 'light' : 'dark';
+        if (document.startViewTransition && !reducedMotion.matches) {
+            document.startViewTransition(() => applyTheme(next));
+        } else {
+            applyTheme(next);
+        }
     });
 
     /* ---------- Header + mobile menu ---------- */
@@ -44,6 +55,12 @@
     menuToggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
     nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+    // Never trap the user: a tap anywhere outside the open menu dismisses it
+    document.addEventListener('pointerdown', (e) => {
+        if (nav.classList.contains('open') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            setMenu(false);
+        }
+    });
 
     /* ---------- Reveal on scroll ---------- */
 
@@ -74,8 +91,12 @@
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
-            navLinks.forEach((a) =>
-                a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
+            navLinks.forEach((a) => {
+                const isCurrent = a.getAttribute('href') === `#${entry.target.id}`;
+                a.classList.toggle('active', isCurrent);
+                if (isCurrent) a.setAttribute('aria-current', 'location');
+                else a.removeAttribute('aria-current');
+            });
         });
     }, { rootMargin: '-45% 0px -50% 0px' });
 
@@ -115,6 +136,51 @@
                 Browse my projects on
                 <a class="text-link" href="https://github.com/roshan-raj" target="_blank" rel="noopener">GitHub</a>.
             </p>`;
+    }
+
+    /* ---------- Copy email ---------- */
+
+    const copyBtn = document.getElementById('copy-email');
+    const copyStatus = document.getElementById('copy-status');
+    let copyTimer;
+
+    const copyText = async (text) => {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return;
+        }
+        // Fallback for file:// and older browsers
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand('copy');
+        ta.remove();
+        if (!ok) throw new Error('copy failed');
+    };
+
+    if (copyBtn) {
+        const label = copyBtn.querySelector('.copy-label');
+        copyBtn.addEventListener('click', async () => {
+            clearTimeout(copyTimer);
+            try {
+                await copyText(copyBtn.dataset.email);
+                copyBtn.classList.add('copied');
+                label.textContent = 'Copied';
+                copyStatus.textContent = 'Email address copied to clipboard';
+            } catch (e) {
+                label.textContent = 'Couldn’t copy';
+                copyStatus.textContent = 'Could not copy automatically';
+            }
+            copyTimer = setTimeout(() => {
+                copyBtn.classList.remove('copied');
+                label.textContent = 'Copy';
+                copyStatus.textContent = '';
+            }, 2000);
+        });
     }
 
     /* ---------- Footer year ---------- */
