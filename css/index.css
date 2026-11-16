@@ -27,7 +27,7 @@
 
     --radius: 14px;
     --radius-sm: 8px;
-    --container: 1120px;
+    --container: 1200px;
     --gutter: clamp(16px, 4vw, 32px);
     --ease: cubic-bezier(.2, .7, .2, 1);
 
@@ -611,7 +611,7 @@ em {
 /* ---------- Sections ---------- */
 
 .section {
-    padding: clamp(72px, 10vw, 128px) 0;
+    padding: clamp(64px, 8vw, 112px) 0;
 }
 
 .section-alt {
@@ -622,8 +622,8 @@ em {
 
 .split {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
-    gap: clamp(32px, 6vw, 96px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr);
+    gap: clamp(32px, 5vw, 72px);
     align-items: start;
 }
 
@@ -633,7 +633,43 @@ em {
 
 .split .section-head {
     position: sticky;
-    top: 112px;
+    top: 104px;
+}
+
+.head-note {
+    margin-top: 18px;
+    color: var(--text-soft);
+    font-size: 1.02rem;
+    max-width: 38ch;
+}
+
+.head-link {
+    margin-top: 20px;
+}
+
+/* About: at-a-glance list in the left column */
+
+.glance {
+    margin-top: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.glance > div {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.glance dt {
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.glance dd {
+    margin-top: 2px;
+    font-weight: 500;
 }
 
 .section-head-wide {
@@ -693,18 +729,19 @@ em {
 }
 
 .role {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 24px;
     padding: 36px 0;
     border-bottom: 1px solid var(--border);
 }
 
+.role:first-child {
+    padding-top: 28px;
+}
+
 .role-period {
     font-family: var(--font-mono);
-    font-size: .82rem;
+    font-size: .8rem;
     color: var(--muted);
-    padding-top: 6px;
+    margin-bottom: 8px;
 }
 
 .role-title {
@@ -720,11 +757,105 @@ em {
 .role-desc {
     margin-top: 14px;
     color: var(--text-soft);
-    max-width: 62ch;
+    max-width: 72ch;
 }
 
 .role .chips {
     margin-top: 18px;
+}
+
+.highlights {
+    margin-top: 22px;
+    display: grid;
+    gap: 14px 36px;
+}
+
+@media (min-width: 1080px) {
+    .highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.highlights li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--text-soft);
+    font-size: .98rem;
+}
+
+.highlights li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .72em;
+    width: 8px;
+    height: 1.5px;
+    background: var(--accent);
+}
+
+.highlights strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Impact numbers */
+
+.impact {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.impact > div {
+    padding: 18px 20px;
+    background: var(--surface);
+}
+
+.impact dt {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 3.6vw, 2.6rem);
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+}
+
+.impact dd {
+    margin-top: 8px;
+    font-size: .9rem;
+    line-height: 1.45;
+    color: var(--text-soft);
+}
+
+/* Education */
+
+.education {
+    padding-top: 8px;
+}
+
+.education ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 18px 36px;
+}
+
+.edu-degree {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+}
+
+.edu-meta {
+    margin-top: 2px;
+    font-size: .92rem;
+    color: var(--muted);
+}
+
+.edu-meta .text-link {
+    font-size: inherit;
 }
 
 /* ---------- Projects ---------- */
@@ -1053,6 +1184,14 @@ em {
         position: static;
     }
 
+    .impact {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .head-note {
+        max-width: 60ch;
+    }
+
     .facts {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1138,6 +1277,21 @@ em {
     .role {
         grid-template-columns: 1fr;
         gap: 6px;
+    }
+
+    .impact {
+        grid-template-columns: 1fr;
+    }
+
+    .impact > div {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    .impact dd {
+        margin-top: 0;
     }
 
     .platform-stats {

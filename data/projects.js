@@ -1,15 +1,30 @@
 // Edit this list to add, remove or reorder projects on the site.
 window.PROJECTS = [
     {
-        "title": "Alumni Connect",
-        "description": "A comprehensive web application enabling seamless communication between current students and alumni. Built with modern web technologies to foster university community connections.",
+        "title": "SquadFit",
+        "description": "A social fitness and nutrition tracker for friend groups: check off workouts, log meals, climb a shared leaderboard, keep streaks alive and nudge friends who slack off. It also runs an MCP server, so members can connect their own AI assistant to log entries, set targets and post a daily coach note. Fully serverless on AWS.",
         "technologies": [
             "TypeScript",
-            "MEAN Stack",
-            "MongoDB",
-            "Angular"
+            "Next.js",
+            "AWS CDK",
+            "Lambda",
+            "DynamoDB",
+            "Cognito",
+            "MCP"
         ],
-        "githubUrl": "https://github.com/roshan-raj/Alumni-Connect"
+        "githubUrl": "https://github.com/TacticalHacker/calci"
+    },
+    {
+        "title": "Social Media Tourism",
+        "description": "Predicts which social-network users are most likely to buy flight tickets, so an aviation company can show targeted ads instead of cold-calling customers. Uses exploratory data analysis and separate propensity models for laptop and mobile users, tuned for accuracy because digital ads are expensive.",
+        "technologies": [
+            "Python",
+            "pandas",
+            "Jupyter",
+            "EDA",
+            "Predictive Modelling"
+        ],
+        "githubUrl": "https://github.com/roshan-raj/social-media-tourism"
     },
     {
         "title": "Blockchain Visualization",
@@ -38,16 +53,6 @@ window.PROJECTS = [
             "JavaScript",
             "API Integration",
             "OpenWeatherMap"
-        ],
-        "githubUrl": "https://github.com/roshan-raj"
-    },
-    {
-        "title": "Car Rental Management",
-        "description": "Online car rental management system with comprehensive booking, inventory management, and customer tracking features. Built for efficiency and scalability.",
-        "technologies": [
-            "PHP",
-            "MySQL",
-            "Web Application"
         ],
         "githubUrl": "https://github.com/roshan-raj"
     },
