@@ -36,9 +36,8 @@ window.SKILL_GRAPH = {
     // Per-project tweaks, keyed by the project's title in projects.js
     projects: {
         // Links to add when a project's tags don't name the skill directly
-        extraSkills: {
-            'Shop Management System': ['SQL']
-        },
+        // e.g. { 'Some Project': ['SQL'] }
+        extraSkills: {},
         // Projects to leave out of the graph
         exclude: ['Weather Application']
     }
