@@ -1227,6 +1227,395 @@ em {
     border: 0;
 }
 
+/* ---------- Skills graph ---------- */
+
+.skills-graph {
+    margin-top: clamp(40px, 5vw, 64px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.skills-graph-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 24px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.skills-graph-head .mini-title {
+    margin-bottom: 0;
+}
+
+.graph-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    color: var(--muted);
+}
+
+.graph-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.key {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-strong);
+    background: var(--surface);
+}
+
+.key-role {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.key-concept {
+    background: var(--text);
+    border-color: var(--text);
+}
+
+.key-project {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+.graph-canvas {
+    min-height: 540px;
+}
+
+.graph-svg {
+    width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.graph-link {
+    stroke: var(--border);
+    stroke-width: 1.2;
+    transition: stroke .25s, opacity .25s;
+}
+
+.graph-node {
+    cursor: grab;
+    outline: none;
+    touch-action: none;
+    transition: opacity .25s;
+}
+
+.graph-node.is-dragging {
+    cursor: grabbing;
+}
+
+.graph-hit {
+    fill: transparent;
+}
+
+.graph-dot {
+    fill: var(--surface);
+    stroke: var(--border-strong);
+    stroke-width: 1.5;
+    transition: stroke .2s, stroke-width .2s;
+}
+
+.graph-role .graph-dot {
+    fill: var(--accent);
+    stroke: var(--accent);
+}
+
+.graph-concept .graph-dot {
+    fill: var(--text);
+    stroke: var(--text);
+}
+
+.graph-project .graph-dot {
+    fill: var(--accent-soft);
+    stroke: var(--accent);
+}
+
+.graph-label {
+    font-family: var(--font-sans);
+    font-size: 11.5px;
+    font-weight: 500;
+    fill: var(--text-soft);
+    text-anchor: middle;
+    pointer-events: none;
+    /* A halo in the panel colour keeps labels readable over crossing lines */
+    paint-order: stroke;
+    stroke: var(--surface);
+    stroke-width: 3.5px;
+    stroke-linejoin: round;
+}
+
+.graph-role .graph-label,
+.graph-concept .graph-label {
+    font-weight: 600;
+    fill: var(--text);
+}
+
+.graph-node:hover .graph-dot,
+.graph-node.is-selected .graph-dot {
+    stroke: var(--accent);
+    stroke-width: 2.5;
+}
+
+.graph-concept:hover .graph-dot,
+.graph-concept.is-selected .graph-dot,
+.graph-role:hover .graph-dot,
+.graph-role.is-selected .graph-dot {
+    stroke: var(--surface);
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-radius: 50%;
+}
+
+.graph-node:focus-visible .graph-hit {
+    stroke: var(--accent);
+    stroke-width: 2;
+    stroke-dasharray: 3 3;
+}
+
+/* With a dot picked, everything unrelated steps back */
+.graph-svg.has-focus .graph-node:not(.is-on) {
+    opacity: .16;
+}
+
+.graph-svg.has-focus .graph-link:not(.is-on) {
+    opacity: .25;
+}
+
+.graph-link.is-on {
+    stroke: var(--accent);
+    stroke-width: 1.6;
+}
+
+.graph-caption {
+    min-height: 4.6em;
+    padding: 16px 22px 18px;
+    border-top: 1px solid var(--border);
+    font-size: .95rem;
+    color: var(--text-soft);
+}
+
+.graph-caption strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ---------- Architecture ---------- */
+
+.arch-note {
+    margin-top: 0;
+    max-width: 44ch;
+}
+
+.arch {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.arch-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.arch-btn {
+    padding: 9px 18px;
+    font: inherit;
+    font-size: .92rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.arch-btn.btn-ghost {
+    background: transparent;
+}
+
+.arch-btn.is-running {
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.arch-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.arch-caption {
+    flex: 1 1 260px;
+    min-height: 1.65em;
+    font-size: .95rem;
+    color: var(--text-soft);
+}
+
+.arch-diagram {
+    padding: 28px 22px;
+    background: var(--bg);
+}
+
+.arch-svg {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.arch-edge {
+    fill: none;
+    stroke: var(--border-strong);
+    stroke-width: 1.5;
+    transition: stroke .2s;
+}
+
+.arch-edge-branch {
+    stroke-dasharray: 4 4;
+}
+
+.arch-edge.is-live {
+    stroke: var(--accent);
+}
+
+.arch-arrowhead {
+    fill: var(--border-strong);
+}
+
+.arch-node {
+    cursor: pointer;
+    outline: none;
+}
+
+.arch-node rect {
+    fill: var(--surface);
+    stroke: var(--border-strong);
+    stroke-width: 1.25;
+    transition: stroke .2s, fill .2s, stroke-width .2s;
+}
+
+.arch-label {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--text);
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.arch-sub {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    fill: var(--muted);
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.arch-node:hover rect,
+.arch-node.is-selected rect {
+    stroke: var(--accent);
+    stroke-width: 2;
+}
+
+.arch-node:focus-visible rect {
+    stroke: var(--accent);
+    stroke-width: 3;
+}
+
+.arch-node.is-live rect {
+    fill: var(--accent-soft);
+    stroke: var(--accent);
+    stroke-width: 2;
+}
+
+.arch-node.is-failed rect {
+    stroke: var(--text);
+    stroke-dasharray: 5 4;
+}
+
+.arch-dot {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+}
+
+.arch-dot.is-on {
+    opacity: 1;
+}
+
+.arch-dot-halo {
+    fill: var(--accent);
+    opacity: .22;
+}
+
+.arch-dot-core {
+    fill: var(--accent);
+    stroke: var(--surface);
+    stroke-width: 1.5;
+}
+
+.arch-dot.is-failed .arch-dot-halo,
+.arch-dot.is-failed .arch-dot-core {
+    fill: var(--text);
+}
+
+.arch-card {
+    padding: 22px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 16px 32px;
+}
+
+.arch-card h3 {
+    font-size: 1.35rem;
+}
+
+.arch-card-head p {
+    margin-top: 2px;
+    font-family: var(--font-mono);
+    font-size: .76rem;
+    color: var(--muted);
+}
+
+.arch-card dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 32px;
+}
+
+.arch-card dt {
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.arch-card dd {
+    font-size: .97rem;
+    color: var(--text-soft);
+    /* Room for the longest note, so the page doesn't jump as boxes are picked */
+    min-height: 6.6em;
+}
+
+/* Contact follows another plain section now, so it draws its own divider */
+.contact {
+    border-top: 1px solid var(--border);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -1455,6 +1844,42 @@ em {
 
     .section-head-wide {
         grid-template-columns: 1fr;
+    }
+
+    .arch-card,
+    .arch-card dl {
+        grid-template-columns: 1fr;
+    }
+
+    .arch-card dd {
+        min-height: 0;
+    }
+
+    .arch-card {
+        min-height: 23em;
+        align-content: start;
+    }
+}
+
+@media (max-width: 599px) {
+    .graph-canvas {
+        min-height: 720px;
+    }
+
+    .arch-diagram {
+        padding: 22px 12px;
+    }
+
+    .skills-graph-head,
+    .arch-controls,
+    .arch-card,
+    .graph-caption {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .graph-caption {
+        min-height: 7.5em;
     }
 }
 

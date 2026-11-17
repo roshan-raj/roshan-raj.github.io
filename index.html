@@ -46,6 +46,7 @@
             <nav class="nav" id="nav" aria-label="Primary">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
+                <a href="#architecture">Architecture</a>
                 <a href="#projects">Projects</a>
                 <a href="#writing">Writing</a>
                 <a href="#contact">Contact</a>
@@ -235,6 +236,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="skills-graph reveal">
+                    <div class="skills-graph-head">
+                        <h3 class="mini-title">How it all connects</h3>
+                        <ul class="graph-legend" aria-label="Legend">
+                            <li><span class="key key-role" aria-hidden="true"></span>Role</li>
+                            <li><span class="key key-concept" aria-hidden="true"></span>Concept</li>
+                            <li><span class="key key-project" aria-hidden="true"></span>Project</li>
+                            <li><span class="key key-skill" aria-hidden="true"></span>Skill</li>
+                        </ul>
+                    </div>
+                    <div class="graph-canvas" id="skills-graph"></div>
+                    <p class="graph-caption" id="skills-graph-caption" role="status" aria-live="polite">Click or tap a dot to see what it connects to. Drag to rearrange.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Experience -->
@@ -349,11 +366,57 @@
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="section" id="projects">
+        <!-- Architecture -->
+        <section class="section" id="architecture">
             <div class="container">
                 <header class="section-head section-head-wide reveal">
-                    <span class="eyebrow">03 — Projects</span>
+                    <span class="eyebrow">03 — Architecture</span>
+                    <h2>One event, start to finish.</h2>
+                    <p class="head-note arch-note">The event-driven pattern I reach for most. Pick a box to see what
+                        it does and why it’s there, or send an event through.</p>
+                </header>
+
+                <div class="arch reveal">
+                    <div class="arch-controls">
+                        <button class="btn btn-primary arch-btn" type="button" data-arch-run="success">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M8 5.5v13l11-6.5z" />
+                            </svg>
+                            Send an event
+                        </button>
+                        <button class="btn btn-ghost arch-btn" type="button" data-arch-run="failure">
+                            Simulate a failure
+                        </button>
+                        <p class="arch-caption" id="arch-caption" role="status" aria-live="polite"></p>
+                    </div>
+
+                    <div class="arch-diagram" id="arch-diagram"></div>
+
+                    <div class="arch-card">
+                        <div class="arch-card-head">
+                            <h3 id="arch-card-title"></h3>
+                            <p id="arch-card-sub"></p>
+                        </div>
+                        <dl>
+                            <div>
+                                <dt>What it does</dt>
+                                <dd id="arch-card-what"></dd>
+                            </div>
+                            <div>
+                                <dt>Why I chose it</dt>
+                                <dd id="arch-card-why"></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <header class="section-head section-head-wide reveal">
+                    <span class="eyebrow">04 — Projects</span>
                     <h2>Selected side projects.</h2>
                     <a class="text-link" href="https://github.com/roshan-raj" target="_blank" rel="noopener">
                         All repositories on GitHub
@@ -369,10 +432,10 @@
         </section>
 
         <!-- Writing -->
-        <section class="section section-alt" id="writing">
+        <section class="section" id="writing">
             <div class="container split">
                 <header class="section-head reveal">
-                    <span class="eyebrow">04 — Writing</span>
+                    <span class="eyebrow">05 — Writing</span>
                     <h2>Notes from building real systems.</h2>
                     <p class="head-note">I write about software development, system architecture and emerging
                         technologies, with practical insights from building scalable systems.</p>
@@ -443,7 +506,7 @@
         <!-- Contact -->
         <section class="section contact" id="contact">
             <div class="container">
-                <span class="eyebrow reveal">05 — Contact</span>
+                <span class="eyebrow reveal">06 — Contact</span>
                 <h2 class="contact-title reveal">Let’s build something <em>together</em>.</h2>
                 <p class="contact-lede reveal">I’m always excited to collaborate on interesting projects. Feel free to
                     reach out.</p>
@@ -522,7 +585,15 @@
     </footer>
 
     <script src="data/projects.js"></script>
+    <script src="data/architecture.js"></script>
+    <script src="data/graph.js"></script>
+    <script src="js/vendor/d3-dispatch.min.js"></script>
+    <script src="js/vendor/d3-quadtree.min.js"></script>
+    <script src="js/vendor/d3-timer.min.js"></script>
+    <script src="js/vendor/d3-force.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/architecture.js"></script>
+    <script src="js/graph.js"></script>
 </body>
 
 </html>
