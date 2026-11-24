@@ -7,6 +7,7 @@
 //   diagram     a short list of steps, drawn as a small flow at the top of the card
 //   image       optional path to a screenshot, shown instead of the diagram
 //   writeupUrl  optional link to an article about it
+//   liveUrl     optional link to the running app
 //
 // Projects without featured: true are listed compactly under "More projects".
 // The skills graph (data/graph.js) reads title and technologies from here too.
@@ -26,7 +27,8 @@ window.PROJECTS = [
             "Cognito",
             "MCP"
         ],
-        "githubUrl": "https://github.com/TacticalHacker/calci"
+        "githubUrl": "https://github.com/TacticalHacker/calci",
+        "liveUrl": "https://squadfit.roshansidequest.com/"
     },
     {
         "title": "Social Media Tourism",

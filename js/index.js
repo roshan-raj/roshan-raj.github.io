@@ -135,6 +135,8 @@
 
     const projectLinks = (p) => `
         <p class="project-links">
+            ${p.liveUrl ? `<a class="text-link" href="${escapeHtml(p.liveUrl)}" target="_blank" rel="noopener"
+                aria-label="Live site for ${escapeHtml(p.title)}">Live site ${ARROW}</a>` : ''}
             <a class="text-link" href="${escapeHtml(p.githubUrl)}" target="_blank" rel="noopener"
                 aria-label="Code for ${escapeHtml(p.title)}">Code ${ARROW}</a>
             ${p.writeupUrl ? `<a class="text-link" href="${escapeHtml(p.writeupUrl)}" target="_blank" rel="noopener"

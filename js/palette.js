@@ -80,6 +80,7 @@
         }
 
         (Array.isArray(window.PROJECTS) ? window.PROJECTS : []).forEach((p) => {
+            if (p.liveUrl) add('Projects', `${p.title}: open live site`, openLink(p.liveUrl), 'demo app live');
             add('Projects', `${p.title}: view code`, openLink(p.githubUrl), (p.technologies || []).join(' '));
         });
 
