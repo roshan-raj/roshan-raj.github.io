@@ -19,6 +19,8 @@ EXCLUDES=(
     --exclude "*/.*"
     --exclude "README.md"
     --exclude "scripts/*"
+    --exclude "*.heic"
+    --exclude "*.HEIC"
 )
 
 # data/life.js holds drafts until the TODOs are filled in; don't publish them by accident.

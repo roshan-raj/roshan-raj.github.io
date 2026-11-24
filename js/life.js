@@ -18,7 +18,7 @@
     const text = (value, label) => (value ? esc(value) : missing(label));
 
     const photo = (p, label) => p && p.src
-        ? `<img src="${esc(p.src)}" alt="${esc(p.alt || '')}" loading="lazy">`
+        ? `<img src="${esc(p.src)}" alt="${esc(p.alt || '')}" loading="lazy"${p.focus ? ` style="object-position: ${esc(p.focus)}"` : ''}>`
         : `<span class="photo-empty" role="img" aria-label="Photo to come">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

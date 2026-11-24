@@ -2015,7 +2015,7 @@ em {
 .postcard-photos img,
 .postcard-photos .photo-empty {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
 }
 
